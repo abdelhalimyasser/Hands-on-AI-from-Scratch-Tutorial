@@ -1,91 +1,292 @@
-# Machine Learning Tutorial
+# Hands-on AI from Scratch Tutorial
 
-A practical, step-by-step machine learning learning repository focused on understanding the **mathematics behind ML** and applying each concept with code.
+A long-term, hands-on learning repository for understanding **Artificial Intelligence and Machine Learning from first principles to real-world implementation**.
 
-The goal of this repository is not only to show formulas, but to connect them to real machine learning ideas through examples, visualizations, and hands-on notebooks.
+This repository is being built as a complete learning path — not just a collection of notebooks and not a single university course.
 
-> The repository is currently under active development. The first module focuses on **Linear Algebra for Machine Learning** using MATLAB inside a Jupyter notebook.
-
----
-
-## Why This Repository?
-
-Machine learning becomes much easier when the mathematics is connected directly to code.
-
-This tutorial is designed around a simple idea:
-
-**Concept → Intuition → Math → Code → Visualization → Machine Learning Application**
-
-Instead of studying linear algebra as isolated theory, the notebook uses a small student dataset and gradually builds the mathematical tools used in machine learning.
+The goal is to understand what happens **under the hood**, build important ideas **from scratch**, study the mathematics behind them, and then apply them using the tools and workflows used in practice.
 
 ---
 
-## Current Tutorial
+## What This Repository Is About
 
-### 01 — Linear Algebra for Machine Learning
+AI is much easier to understand when you do not treat libraries as black boxes.
 
-Notebook:
+This repository follows the same idea across every topic:
+
+**Theory → Intuition → Mathematics → From-Scratch Implementation → Visualization → Practical Implementation → Experiments**
+
+The repository will gradually cover the foundations behind AI, machine learning, neural networks, NLP, and related areas, while also going beyond standard university material whenever a deeper or more advanced explanation is useful.
+
+It is intended to grow into a large reference that can be used for:
+
+- learning,
+- revision,
+- experimentation,
+- implementation practice,
+- understanding algorithms internally,
+- and connecting mathematical theory to real AI systems.
+
+---
+
+# Three Languages, Three Different Roles
+
+This repository intentionally uses **C, MATLAB, and Python**.
+
+They are not interchangeable here. Each one has a specific purpose.
+
+## C — Understand What Happens Under the Hood
+
+C is used when implementing algorithms or important mechanisms from scratch helps reveal what libraries normally hide.
+
+Examples may include:
+
+- core algorithms,
+- data structures used by ML methods,
+- numerical routines,
+- optimization-related implementations,
+- matrix or vector operations,
+- low-level algorithm experiments,
+- and selected ML algorithms built without relying on high-level ML libraries.
+
+The purpose is not to replace Python libraries.
+
+The purpose is to understand what those libraries are doing internally.
+
+---
+
+## MATLAB — Mathematics, Proofs, and Visualization
+
+MATLAB is used for the mathematical foundation of AI and machine learning.
+
+This includes topics such as:
+
+- linear algebra,
+- probability,
+- statistics,
+- calculus,
+- optimization,
+- numerical methods,
+- mathematical derivations,
+- geometric intuition,
+- proofs and demonstrations,
+- and visual experiments.
+
+MATLAB makes it possible to move quickly between equations, vectors, matrices, plots, and experiments.
+
+The goal is to make the mathematics **visible and executable**, rather than leaving it only on paper.
+
+---
+
+## Python — Real-World AI and Machine Learning
+
+Python is used for the practical implementation of the concepts in realistic AI and machine learning workflows.
+
+This will include tools and libraries such as:
+
+- NumPy
+- Pandas
+- Matplotlib
+- SciPy
+- scikit-learn
+- PyTorch
+- and other libraries when they become relevant.
+
+Python notebooks and projects will focus on:
+
+- working with real datasets,
+- preprocessing,
+- training models,
+- evaluation,
+- experimentation,
+- model comparison,
+- deep learning,
+- NLP,
+- and practical AI workflows.
+
+---
+
+# Learning Philosophy
+
+The repository is built around understanding before abstraction.
+
+For an important concept or algorithm, the preferred progression is:
+
+1. **What problem are we trying to solve?**
+2. **What is the intuition behind it?**
+3. **What is the mathematics?**
+4. **Can we calculate a small example manually?**
+5. **Can we visualize what is happening?**
+6. **Can we implement the important parts from scratch?**
+7. **How do real libraries implement or expose the idea?**
+8. **How is it used in an actual machine learning workflow?**
+9. **What assumptions and limitations does it have?**
+10. **What changes when we move to larger or more advanced problems?**
+
+The goal is not to memorize APIs.
+
+The goal is to understand the ideas deeply enough that the APIs make sense.
+
+---
+
+# Scope
+
+The repository will cover multiple subjects that contribute to modern AI.
+
+The exact structure will evolve as the repository grows, but the intended scope includes the following areas.
+
+## Mathematical Foundations
+
+- Linear Algebra
+- Probability
+- Statistics
+- Calculus
+- Optimization
+- Numerical Methods
+- Information Theory
+
+## Machine Learning Foundations
+
+- Data preprocessing
+- Feature engineering
+- Distance and similarity
+- Regression
+- Classification
+- Model evaluation
+- Bias and variance
+- Regularization
+- Optimization
+- Cross-validation
+- Hyperparameter tuning
+
+## Classical Machine Learning
+
+- Linear Regression
+- Logistic Regression
+- K-Nearest Neighbors
+- Naive Bayes
+- Support Vector Machines
+- Decision Trees
+- Random Forests
+- Ensemble Learning
+- Clustering
+- Dimensionality Reduction
+- Principal Component Analysis
+- and related algorithms
+
+## Artificial Intelligence Foundations
+
+- Search algorithms
+- State-space search
+- Heuristics
+- Constraint satisfaction
+- Knowledge representation
+- Logic
+- Reasoning
+- Expert systems
+- Planning
+- and other classical AI topics
+
+## Neural Networks and Deep Learning
+
+- Perceptrons
+- Neural network fundamentals
+- Forward propagation
+- Backpropagation
+- Activation functions
+- Loss functions
+- Optimization algorithms
+- Initialization
+- Regularization
+- Multilayer neural networks
+- Convolutional Neural Networks
+- Recurrent Neural Networks
+- Attention
+- Transformers
+- and deeper architectures
+
+## Natural Language Processing
+
+- Text preprocessing
+- Tokenization
+- Vector representations
+- Word embeddings
+- Language modeling
+- Sequence models
+- Attention
+- Transformers
+- modern NLP workflows
+- and related topics
+
+## Advanced Topics
+
+As the repository grows, additional advanced topics may be added, including subjects from:
+
+- representation learning,
+- deep learning,
+- generative AI,
+- large language models,
+- retrieval systems,
+- AI agents,
+- reinforcement learning,
+- computer vision,
+- research papers,
+- optimization,
+- and AI systems.
+
+The repository is not restricted to a fixed syllabus.
+
+If a topic helps build a stronger understanding of AI, it can become part of the tutorial.
+
+---
+
+# Current Progress
+
+The repository currently starts with **Linear Algebra for Machine Learning**.
+
+The first notebook is:
 
 [`tutorial/01-linear-algebra/01_ml_linear_algebra.ipynb`](tutorial/01-linear-algebra/01_ml_linear_algebra.ipynb)
 
-The notebook starts with a dataset of **50 students × 5 features** and uses it to explain linear algebra step by step.
+Current material includes:
 
-### Topics Covered
+- representing datasets as matrices,
+- matrix dimensions,
+- accessing matrix elements,
+- rows and columns as vectors,
+- row vectors and column vectors,
+- transpose,
+- vector addition,
+- vector subtraction,
+- scalar multiplication,
+- linear combinations,
+- vector norms,
+- L1 / Manhattan distance,
+- L2 / Euclidean distance,
+- Max / L-infinity norm,
+- Mean Absolute Error,
+- Root Mean Square Error,
+- dot product,
+- geometric interpretation of the dot product,
+- unit vectors,
+- projection,
+- dimensionality reduction intuition,
+- similarity measurement,
+- cosine similarity,
+- and MATLAB visualizations.
 
-#### Matrices and Vectors
-- Representing a dataset as a matrix
-- Matrix dimensions
-- Accessing individual matrix elements
-- Rows and columns as vectors
-- Row vectors vs. column vectors
-- Matrix transpose
-
-#### Vector Operations
-- Vector addition
-- Vector subtraction
-- Scalar multiplication
-- Linear combinations
-- Visualizing vector operations
-
-#### Vector Norms
-- Why norms are useful in machine learning
-- L1 norm / Manhattan norm
-- L2 norm / Euclidean norm
-- Max norm / L-infinity norm
-- Measuring distances between samples
-- Normalization
-- Regularization intuition
-- Similarity measurement
-- Optimization intuition
-- Feature representation
-
-#### Error Metrics from Norms
-- Mean Absolute Error (MAE)
-- Root Mean Square Error (RMSE)
-- Manual calculations and MATLAB implementations
-
-#### Dot Product
-- Manual dot-product calculation
-- Geometric interpretation
-- Scalar product
-- Projection product
-- Unit vectors
-- Vector projection
-- Projection visualization
-
-#### Machine Learning Connections
-- Dimensionality reduction intuition
-- Projection and PCA intuition
-- Similarity measurements
-- Cosine similarity
-- Interpreting cosine similarity geometrically
+The Linear Algebra section is **still in progress** and will continue to expand.
 
 ---
 
-## Repository Structure
+# Repository Structure
+
+The repository structure is still evolving.
+
+At the moment:
 
 ```text
-Machine-Learning-Tutorial/
+Hands-on-AI-from-Scratch-Tutorial/
 │
 ├── tutorial/
 │   └── 01-linear-algebra/
@@ -95,138 +296,223 @@ Machine-Learning-Tutorial/
 └── README.md
 ```
 
-More modules will be added as the tutorial grows.
+As heavier topics are added, the repository will be reorganized into a clearer structure for the different subjects, languages, implementations, exercises, and experiments.
+
+The structure may therefore change significantly over time.
 
 ---
 
-## Dataset Used in the Linear Algebra Notebook
+# Example of How a Topic May Be Covered
 
-The current notebook uses a small educational dataset with 50 students.
-
-Each row represents a student and each column represents a feature:
-
-| Feature | Description |
-|---|---|
-| Study Hours | Study hours per day |
-| Attendance | Attendance percentage |
-| Assignments | Assignment performance percentage |
-| Midterm | Midterm exam score |
-| Final | Final exam score |
-
-Mathematically, the dataset is represented as:
+A topic such as **Support Vector Machines** may eventually include several layers:
 
 ```text
-A ∈ R^(50 × 5)
+Support Vector Machines
+│
+├── Mathematical intuition
+├── Geometry of the separating hyperplane
+├── Margin derivation
+├── Optimization formulation
+├── MATLAB visualization
+├── From-scratch implementation
+├── C implementation of selected internals
+├── Python implementation
+├── scikit-learn comparison
+├── Experiments on datasets
+├── Evaluation
+└── Advanced extensions
 ```
 
-This makes it possible to introduce matrices and vectors using something that already looks like a real machine learning dataset.
+The same philosophy can be applied to many other topics.
+
+This is what is meant by **Hands-on AI from Scratch**.
 
 ---
 
-## Tools
+# Not a Fixed University Syllabus
 
-The tutorial currently uses:
+Some of the material in this repository overlaps with university courses in:
 
-- **MATLAB**
-- **Jupyter Notebook**
-- Mathematical visualizations and plots
+- Artificial Intelligence,
+- Machine Learning,
+- Mathematics,
+- Probability and Statistics,
+- Neural Networks,
+- NLP,
+- and related subjects.
 
-You can run the notebook using a local MATLAB/Jupyter setup or a compatible online environment.
+However, this repository is **not intended to follow the university curriculum lesson by lesson**.
+
+The pace may be faster.
+
+Some topics may be explored much more deeply.
+
+Some topics may appear earlier when they are useful.
+
+And advanced material may be added far beyond the requirements of a normal course.
+
+The aim is to build a coherent understanding of AI rather than reproduce a specific syllabus.
 
 ---
 
-## Getting Started
+# Who Is This Repository For?
+
+This repository may be useful if you:
+
+- are learning AI or machine learning,
+- want stronger mathematical foundations,
+- want to understand algorithms instead of only calling libraries,
+- like learning through notebooks and experiments,
+- want both theoretical and practical explanations,
+- want to see selected algorithms implemented from scratch,
+- want to connect C, MATLAB, and Python to AI concepts,
+- or need a growing reference to revisit later.
+
+You do not need to understand every advanced topic before starting.
+
+The repository is designed to grow from foundations toward more difficult material.
+
+---
+
+# How to Use the Repository
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/abdelhalimyasser/Machine-Learning-Tutorial.git
-cd Machine-Learning-Tutorial
+git clone https://github.com/abdelhalimyasser/Hands-on-AI-from-Scratch-Tutorial.git
+cd Hands-on-AI-from-Scratch-Tutorial
 ```
 
-Then open:
+Then explore the tutorials in order when possible.
+
+For the current material:
 
 ```text
 tutorial/01-linear-algebra/01_ml_linear_algebra.ipynb
 ```
 
-Run the cells in order. The notebook is intentionally structured so that later concepts build on earlier ones.
+Each topic may eventually contain different combinations of:
+
+- explanations,
+- notebooks,
+- source code,
+- visualizations,
+- exercises,
+- derivations,
+- experiments,
+- datasets,
+- and practical implementations.
 
 ---
 
-## Learning Approach
+# Roadmap
 
-For every major mathematical idea, try to answer five questions:
+This is a long-term roadmap and will continue to evolve.
 
-1. **What does it mean mathematically?**
-2. **What does it mean geometrically?**
-3. **How do we calculate it manually?**
-4. **How do we implement it in MATLAB?**
-5. **Where is it used in machine learning?**
+### Foundations
 
-This approach helps turn formulas into tools that can actually be used when studying ML algorithms.
+- [ ] Linear Algebra
+- [ ] Probability
+- [ ] Statistics
+- [ ] Calculus
+- [ ] Optimization
+- [ ] Numerical Methods
 
----
+### Machine Learning
 
-## Roadmap
-
-Planned areas for future tutorials include:
-
-- [x] Linear Algebra Fundamentals
-- [x] Vector Norms and Distance Metrics
-- [x] Dot Product, Projection, and Cosine Similarity
-- [ ] Matrix Multiplication
-- [ ] Linear Transformations
-- [ ] Rank, Linear Independence, and Basis
-- [ ] Eigenvalues and Eigenvectors
-- [ ] PCA from the Mathematics to the Implementation
-- [ ] Probability and Statistics for Machine Learning
-- [ ] Calculus and Optimization
-- [ ] Data Preprocessing
-- [ ] Linear Regression
-- [ ] Logistic Regression
+- [ ] Data preprocessing
+- [ ] Regression
+- [ ] Classification
 - [ ] K-Nearest Neighbors
+- [ ] Naive Bayes
 - [ ] Support Vector Machines
-- [ ] Decision Trees and Ensemble Methods
+- [ ] Decision Trees
+- [ ] Random Forests
+- [ ] Ensemble Learning
+- [ ] Clustering
+- [ ] Dimensionality Reduction
 - [ ] Model Evaluation
+- [ ] Hyperparameter Tuning
+
+### Artificial Intelligence
+
+- [ ] Search
+- [ ] Heuristics
+- [ ] Constraint Satisfaction
+- [ ] Knowledge Representation
+- [ ] Logic and Reasoning
+- [ ] Expert Systems
+- [ ] Planning
+
+### Deep Learning
+
 - [ ] Neural Network Foundations
+- [ ] Backpropagation from Scratch
+- [ ] Optimization for Neural Networks
+- [ ] CNNs
+- [ ] RNNs
+- [ ] Attention
+- [ ] Transformers
 
-The roadmap may evolve as new notebooks are added.
+### Natural Language Processing
+
+- [ ] Text Processing
+- [ ] Embeddings
+- [ ] Language Models
+- [ ] Sequence Models
+- [ ] Transformers for NLP
+- [ ] Modern NLP Applications
+
+### Beyond the Fundamentals
+
+- [ ] Computer Vision
+- [ ] Reinforcement Learning
+- [ ] Generative AI
+- [ ] Large Language Models
+- [ ] Retrieval-Augmented Systems
+- [ ] AI Agents
+- [ ] Research Paper Implementations
+
+This is not a promise of a fixed order. Topics will be added and reorganized as the repository develops.
 
 ---
 
-## Who Is This For?
+# Contributing
 
-This repository is useful for anyone who:
+Contributions are welcome.
 
-- is starting machine learning,
-- knows basic programming but wants stronger mathematical intuition,
-- wants to understand *why* ML algorithms work instead of only calling libraries,
-- wants practical MATLAB examples alongside the mathematics,
-- or needs a structured revision reference for ML foundations.
+If you want to contribute an explanation, implementation, notebook, visualization, exercise, correction, or improvement, feel free to open an issue or submit a pull request.
 
----
+Contributions should try to preserve the main philosophy of the repository:
 
-## Contributing
+> **Explain the idea, understand the mathematics, reveal what happens under the hood, and connect it to practical AI.**
 
-Suggestions, corrections, and improvements are welcome.
-
-If you find an error or have an idea for a better explanation, example, or visualization, feel free to open an issue or submit a pull request.
+If you are interested in becoming a regular contributor as the repository grows, you are also welcome to get involved.
 
 ---
 
-## License
+# Follow the Progress
+
+This repository is under active development.
+
+New material will be added continuously as new topics are studied, implemented, and refined.
+
+If you find the project useful, consider giving the repository a **⭐ Star** so you can easily return to it and follow future updates.
+
+---
+
+# License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Author
+# Author
 
 **Abdelhalim Yasser**
 
 GitHub: [@abdelhalimyasser](https://github.com/abdelhalimyasser)
 
----
+Repository:
 
-If this repository helps you understand machine learning more deeply, consider giving it a ⭐.
+[Hands-on AI from Scratch Tutorial](https://github.com/abdelhalimyasser/Hands-on-AI-from-Scratch-Tutorial)
